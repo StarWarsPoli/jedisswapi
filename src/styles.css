@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+#peliculas{
+    background-color:black;
+    float:left;
+    display: block;
+    width: 500px;
+    padding-left: 10px;
+}
+
+.peliTitle{
+    color: yellow;
+    cursor:pointer;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+}
+
+.clear{
+    float: none;
+    clear: both;
+}
