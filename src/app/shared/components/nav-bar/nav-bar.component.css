@@ -1,0 +1,57 @@
+
+.bg-dark {
+  background-color: #000000 !important;
+}
+
+.navbar {
+  height: 180px;
+  border-bottom: 2px solid #ebd800;
+}
+
+#nav-peliculas {
+	display: block;
+	width: 70px;
+	height: 75px;
+	color: #EBD800;
+	text-align: center;
+}
+
+#nav-personajes {
+	display: block;
+	width: 70px;
+	height: 75px;
+	color: #EBD800;
+	text-align: center;
+}
+
+#nav-planetas {
+	display: block;
+	width: 70px;
+	height: 75px;
+	color: #EBD800;
+	text-align: center;
+}
+
+#nav-especies {
+	display: block;
+	width: 70px;
+	height: 75px;
+	color: #EBD800;
+	text-align: center;
+}
+
+#nav-vehiculos {
+	display: block;
+	width: 70px;
+	height: 75px;
+	color: #EBD800;
+	text-align: center;
+}
+
+#nav-naves {
+	display: block;
+	width: 70px;
+	height: 75px;
+	color: #EBD800;
+	text-align: center;
+}
