@@ -1,0 +1,13 @@
+#resultados {
+  background: #222222;
+  margin:auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-bottom: 3px solid #EBD800;
+  padding-top: 30px;
+}
+
+.resultados-titulo {
+  background:#222222;
+  text-align: center;
+}
