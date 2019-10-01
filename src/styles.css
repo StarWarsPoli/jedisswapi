@@ -1,27 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
-#peliculas{
-    background-color:black;
-    float:left;
-    display: block;
-    width: 500px;
-    padding-left: 10px;
+body {
+  padding-top: 180px;
+  background: #000;
+  color: #ebd800;
+  min-height: 100vh;
 }
 
-.peliTitle{
-    color: yellow;
-    cursor:pointer;
+p {
+  color: #ebd800;
+  line-height: 22px;
 }
 
-*{
-    font-family: 'Roboto', sans-serif;
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently*/
+.portfolio-item {
+  margin-bottom: 30px;
 }
 
-.clear{
-    float: none;
-    clear: both;
+a {
+  color: #ebd800;
+}
+
+a:hover {
+  color: #ebd800;
+  text-decoration: underline;
+}
+
+h2 {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #ebd800;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+h2 span {
+  background: #222;
+  padding: 20px 10px 0px 0;
 }
