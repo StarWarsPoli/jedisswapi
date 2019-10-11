@@ -22,46 +22,24 @@
     </div>
   </div>
   <h2><span style="background: #000000;">Peliculas</span></h2>
-  <div class="row" style="padding-top: 20px;">
-    <div class="col-lg-4 col-sm-6 portfolio-item">
+
+  <div class="row" style="padding-top: 20px;" >
+
+    <div class="col-lg-4 col-sm-6 portfolio-item" *ngFor="let film of films">
       <div class="card h-100">
         <a href="#"
           ><img class="card-img-top" src="http://placehold.it/400x700" alt=""
         /></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="#">A NEW HOPE</a>
+            <a href="#">{{film.title}}</a>
           </h4>
-          <p class="card-text">1977-05-25</p>
+          <p class="card-text">{{film.release_date}}</p>
         </div>
       </div>
     </div>
-    <div class="col-lg-4 col-sm-6 portfolio-item">
-      <div class="card h-100">
-        <a href="#"
-          ><img class="card-img-top" src="http://placehold.it/400x700" alt=""
-        /></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">THE EMPIRE STRIKES BACK</a>
-          </h4>
-          <p class="card-text">1980-05-17</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 portfolio-item">
-      <div class="card h-100">
-        <a href="#"
-          ><img class="card-img-top" src="http://placehold.it/400x700" alt=""
-        /></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">RETURN OF THE JEDI</a>
-          </h4>
-          <p class="card-text">1983-05-25</p>
-        </div>
-      </div>
-    </div>
+
+
   </div>
   <!-- /.row -->
 </div>
