@@ -20,4 +20,10 @@ export class SwapiService {
     const url = `${this.urlBase}people`;
     return this.http.get<any>(url).pipe(take(1));
   }
+
+  getPlanets(): Observable<any> {
+    const url = `${this.urlBase}planets`;
+    return this.http.get<any>(url).pipe(take(1));
+  }
+
 }
