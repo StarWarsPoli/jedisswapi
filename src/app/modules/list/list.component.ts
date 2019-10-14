@@ -6,6 +6,7 @@ import { PlanetModel } from 'src/app/shared/models/planet.model';
 import { FilmModel } from 'src/app/shared/models/film.model';
 import { SpeciesModel } from 'src/app/shared/models/species.model';
 import { VehicleModel } from 'src/app/shared/models/vehicle.model';
+import { StarshipModel } from 'src/app/shared/models/starship.model';
 
 @Component({
   selector: 'app-list',
@@ -18,6 +19,7 @@ export class ListComponent implements OnInit {
   planets: PlanetModel[];
   species: SpeciesModel[];
   vehicles: VehicleModel[];
+  starships: StarshipModel[];
   param: string;
 
   constructor(
@@ -34,6 +36,7 @@ export class ListComponent implements OnInit {
     this.initFilms();
     this.initSpecies();
     this.initVehicles();
+    this.initStarships();
   }
 
   initFilms() {
@@ -60,14 +63,21 @@ export class ListComponent implements OnInit {
   initSpecies() {
     this.swapiService.getSpecies().subscribe(resolve => {
       this.species = resolve.results;
-      console.log(resolve);     
+      console.log(resolve);
     });
   }
 
   initVehicles() {
     this.swapiService.getVehicles().subscribe(resolve => {
       this.vehicles = resolve.results;
-      console.log(resolve);     
+      console.log(resolve);
+    });
+  }
+
+  initStarships() {
+    this.swapiService.getStarships().subscribe(resolve => {
+      this.starships = resolve.results;
+      console.log(resolve);
     });
   }
 }
