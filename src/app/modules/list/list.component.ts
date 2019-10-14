@@ -33,6 +33,7 @@ export class ListComponent implements OnInit {
     this.initPlanets();
     this.initFilms();
     this.initSpecies();
+    this.initVehicles();
   }
 
   initFilms() {
