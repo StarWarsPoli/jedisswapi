@@ -30,4 +30,9 @@ export class SwapiService {
     const url = `${this.urlBase}species`;
     return this.http.get<any>(url).pipe(take(1));
   }
+
+  getVehicles(): Observable<any> {
+    const url = `${this.urlBase}vehicles`;
+    return this.http.get<any>(url).pipe(take(1));
+  }
 }
