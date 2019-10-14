@@ -20,11 +20,9 @@
       </div>
     </div>
 
-    <div class="row" *ngSwitchCase="'personajes'">
+    <div class="row" *ngSwitchCase="'personajes'" style="margin: 10px;">
       <div
-        class="col-lg-2 col-sm-4 portfolio-item"
-        *ngFor="let person of people"
-      >
+        class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let person of people" style="margin: 5px;">
         <div class="card h-100">
           <a [routerLink]="['/detail/1']"
             ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
@@ -36,11 +34,9 @@
       </div>
     </div>
 
-    <div class="row" *ngSwitchCase="'planetas'">
+    <div class="row" *ngSwitchCase="'planetas'" style="margin: 10px;">
       <div
-        class="col-lg-2 col-sm-4 portfolio-item"
-        *ngFor="let planet of planets"
-      >
+        class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let planet of planets" style="margin: 5px;">
         <div class="card h-100">
           <a [routerLink]="['/detail/1']"
             ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
@@ -52,11 +48,9 @@
       </div>
     </div>
 
-    <div class="row" *ngSwitchCase="'especies'">
+    <div class="row" *ngSwitchCase="'especies'" style="margin: 10px;">
       <div
-        class="col-lg-2 col-sm-4 portfolio-item"
-        *ngFor="let specie of species"
-      >
+        class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let specie of species" style="margin: 5px;">
         <div class="card h-100">
           <a [routerLink]="['/detail/1']"
             ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
@@ -68,8 +62,8 @@
       </div>
     </div>
 
-    <div class="row" *ngSwitchCase="'vehiculos'">
-      <div class="col-lg-2 col-sm-4 portfolio-item">
+    <div class="row" *ngSwitchCase="'vehiculos'" style="margin: 10px;">
+      <div class="col-lg-2 col-sm-4 portfolio-item" style="margin: 5px;">
         <div class="card h-100">
           <a [routerLink]="['/detail/1']"
             ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
@@ -81,8 +75,8 @@
       </div>
     </div>
 
-    <div class="row" *ngSwitchCase="'naves'">
-      <div class="col-lg-2 col-sm-4 portfolio-item">
+    <div class="row" *ngSwitchCase="'naves'" style="margin: 10px;">
+      <div class="col-lg-2 col-sm-4 portfolio-item" style="margin: 5px;">
         <div class="card h-100">
           <a [routerLink]="['/detail/1']"
             ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
