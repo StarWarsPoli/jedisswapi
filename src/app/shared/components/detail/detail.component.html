@@ -1,0 +1,197 @@
+<ng-container *ngIf="film">
+  <div class="container" id="detalles">
+    <div class="row">
+      <div class="col-6 col-md-4 image-detalle">
+        <a href="#"
+          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
+        /></a>
+      </div>
+      <div class="col-12 col-md-8 text-detalle">
+        <h2>
+          <span>Star Wars: {{ film.title }}</span>
+        </h2>
+        <p>
+          {{ film.opening_crawl }}
+        </p>
+        <h3>Director //</h3>
+        <p>{{ film.director }}</p>
+        <h3>Fecha de Lanzamiento //</h3>
+        <p>{{ film.release_date }}</p>
+        <h3>Personajes</h3>
+        <div class="row">
+          <div
+            class="col-lg-2 col-sm-4 portfolio-item"
+            *ngFor="let person of film.characters"
+          >
+            <app-character [personURL]="person"></app-character>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="person">
+  <div class="container" id="detalles">
+    <div class="row">
+      <div class="col-6 col-md-4 image-detalle">
+        <a href="#"
+          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
+        /></a>
+      </div>
+      <div class="col-12 col-md-8 text-detalle">
+        <h2>
+          <span>Star Wars: {{ person.name }}</span>
+        </h2>
+        <p>
+          <!-- {{ film.opening_crawl }} -->
+        </p>
+        <h3>Director //</h3>
+        <!-- <p>{{ film.director }}</p>
+        <h3>Fecha de Lanzamiento //</h3>
+        <p>{{ film.release_date }}</p> -->
+        <h3>Personajes</h3>
+        <div class="row">
+          <!-- <div
+            class="col-lg-2 col-sm-4 portfolio-item"
+            *ngFor="let person of film.characters"
+          >
+            <app-character [personURL]="person"></app-character>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="planet">
+  <div class="container" id="detalles">
+    <div class="row">
+      <div class="col-6 col-md-4 image-detalle">
+        <a href="#"
+          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
+        /></a>
+      </div>
+      <div class="col-12 col-md-8 text-detalle">
+        <h2>
+          <span>Star Wars: {{ planet.name }}</span>
+        </h2>
+        <p>
+          <!-- {{ film.opening_crawl }} -->
+        </p>
+        <h3>Director //</h3>
+        <!-- <p>{{ film.director }}</p>
+        <h3>Fecha de Lanzamiento //</h3>
+        <p>{{ film.release_date }}</p> -->
+        <h3>Personajes</h3>
+        <div class="row">
+          <!-- <div
+            class="col-lg-2 col-sm-4 portfolio-item"
+            *ngFor="let person of film.characters"
+          >
+            <app-character [personURL]="person"></app-character>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="specie">
+  <div class="container" id="detalles">
+    <div class="row">
+      <div class="col-6 col-md-4 image-detalle">
+        <a href="#"
+          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
+        /></a>
+      </div>
+      <div class="col-12 col-md-8 text-detalle">
+        <h2>
+          <span>Star Wars: {{ specie.name }}</span>
+        </h2>
+        <p>
+          <!-- {{ film.opening_crawl }} -->
+        </p>
+        <h3>Director //</h3>
+        <!-- <p>{{ film.director }}</p>
+        <h3>Fecha de Lanzamiento //</h3>
+        <p>{{ film.release_date }}</p> -->
+        <h3>Personajes</h3>
+        <div class="row">
+          <!-- <div
+            class="col-lg-2 col-sm-4 portfolio-item"
+            *ngFor="let person of film.characters"
+          >
+            <app-character [personURL]="person"></app-character>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="vehicle">
+  <div class="container" id="detalles">
+    <div class="row">
+      <div class="col-6 col-md-4 image-detalle">
+        <a href="#"
+          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
+        /></a>
+      </div>
+      <div class="col-12 col-md-8 text-detalle">
+        <h2>
+          <span>Star Wars: {{ vehicle.name }}</span>
+        </h2>
+        <p>
+          <!-- {{ film.opening_crawl }} -->
+        </p>
+        <h3>Director //</h3>
+        <!-- <p>{{ film.director }}</p>
+        <h3>Fecha de Lanzamiento //</h3>
+        <p>{{ film.release_date }}</p> -->
+        <h3>Personajes</h3>
+        <div class="row">
+          <!-- <div
+            class="col-lg-2 col-sm-4 portfolio-item"
+            *ngFor="let person of film.characters"
+          >
+            <app-character [personURL]="person"></app-character>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="starship">
+  <div class="container" id="detalles">
+    <div class="row">
+      <div class="col-6 col-md-4 image-detalle">
+        <a href="#"
+          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
+        /></a>
+      </div>
+      <div class="col-12 col-md-8 text-detalle">
+        <h2>
+          <span>Star Wars: {{ starship.name }}</span>
+        </h2>
+        <p>
+          <!-- {{ film.opening_crawl }} -->
+        </p>
+        <h3>Director //</h3>
+        <!-- <p>{{ film.director }}</p>
+        <h3>Fecha de Lanzamiento //</h3>
+        <p>{{ film.release_date }}</p> -->
+        <h3>Personajes</h3>
+        <div class="row">
+          <!-- <div
+            class="col-lg-2 col-sm-4 portfolio-item"
+            *ngFor="let person of film.characters"
+          >
+            <app-character [personURL]="person"></app-character>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

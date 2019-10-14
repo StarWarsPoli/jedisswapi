@@ -4,6 +4,7 @@ export class FilmModel {
     public release_date?: string,
     public director?: string,
     public characters?: string[],
-    public url?: string
+    public url?: string,
+    opening_crawl?: string
   ) {}
 }

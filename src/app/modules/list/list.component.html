@@ -22,13 +22,16 @@
 
     <div class="row" *ngSwitchCase="'personajes'" style="margin: 10px;">
       <div
-        class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let person of people" style="margin: 5px;">
+        class="col-lg-2 col-sm-4 portfolio-item"
+        *ngFor="let person of people; let i = index"
+        style="margin: 5px;"
+      >
         <div class="card h-100">
-          <a [routerLink]="['/detail/1']"
+          <a [routerLink]="['/people/', i + 1]"
             ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
           /></a>
           <div class="resultados-titulo">
-            <a [routerLink]="['/detail/1']">{{ person.name }}</a>
+            <a [routerLink]="['/people/', i + 1]">{{ person.name }}</a>
           </div>
         </div>
       </div>
@@ -36,13 +39,16 @@
 
     <div class="row" *ngSwitchCase="'planetas'" style="margin: 10px;">
       <div
-        class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let planet of planets" style="margin: 5px;">
+        class="col-lg-2 col-sm-4 portfolio-item"
+        *ngFor="let planet of planets; let i = index"
+        style="margin: 5px;"
+      >
         <div class="card h-100">
-          <a [routerLink]="['/detail/1']"
+          <a [routerLink]="['/planets/', i + 1]"
             ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
           /></a>
           <div class="resultados-titulo">
-            <a [routerLink]="['/detail/1']">{{ planet.name }}</a>
+            <a [routerLink]="['/planets/1', i + 1]">{{ planet.name }}</a>
           </div>
         </div>
       </div>
@@ -50,39 +56,50 @@
 
     <div class="row" *ngSwitchCase="'especies'" style="margin: 10px;">
       <div
-        class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let specie of species" style="margin: 5px;">
+        class="col-lg-2 col-sm-4 portfolio-item"
+        *ngFor="let specie of species; let i = index"
+        style="margin: 5px;"
+      >
         <div class="card h-100">
-          <a [routerLink]="['/detail/1']"
+          <a [routerLink]="['/species/', i + 1]"
             ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
           /></a>
           <div class="resultados-titulo">
-            <a [routerLink]="['/detail/1']">{{ specie.name }}</a>
+            <a [routerLink]="['/species/', i + 1]">{{ specie.name }}</a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="row" *ngSwitchCase="'vehiculos'" style="margin: 10px;">
-      <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let vehicle of vehicles" style="margin: 5px;">
+      <div
+        class="col-lg-2 col-sm-4 portfolio-item"
+        *ngFor="let vehicle of vehicles; let i = index"
+        style="margin: 5px;"
+      >
         <div class="card h-100">
-          <a [routerLink]="['/detail/1']"
-            ><img class="card-img-top"  src="http://placehold.it/140x140" alt=""
+          <a [routerLink]="['/vehicles/', i + 1]"
+            ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
           /></a>
-          <div class="resultados-titulo" >
-            <a [routerLink]="['/detail/1']">{{ vehicle.name }}</a>
+          <div class="resultados-titulo">
+            <a [routerLink]="['/vehicles/', i + 1]">{{ vehicle.name }}</a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="row" *ngSwitchCase="'naves'" style="margin: 10px;">
-      <div class="col-lg-2 col-sm-4 portfolio-item"  *ngFor="let starship of starships" style="margin: 5px;">
+      <div
+        class="col-lg-2 col-sm-4 portfolio-item"
+        *ngFor="let starship of starships; let i = index"
+        style="margin: 5px;"
+      >
         <div class="card h-100">
-          <a [routerLink]="['/detail/1']"
+          <a [routerLink]="['/starships/', i + 1]"
             ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
           /></a>
           <div class="resultados-titulo">
-            <a [routerLink]="['/detail/1']">{{ starship.name }}</a>
+            <a [routerLink]="['/starships/', i + 1]">{{ starship.name }}</a>
           </div>
         </div>
       </div>

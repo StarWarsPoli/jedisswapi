@@ -29,7 +29,7 @@
       *ngFor="let film of films; let i = index"
     >
       <div class="card h-100">
-        <a [routerLink]="['/detail/', film.url]"
+        <a [routerLink]="['/movies/', i + 1]"
           ><img class="card-img-top" src="http://placehold.it/400x700" alt=""
         /></a>
         <div class="card-body">

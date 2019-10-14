@@ -11,14 +11,12 @@ export class SwapiService {
 
   constructor(private http: HttpClient) {}
 
-  // All films
   getAllFilms(): Observable<any> {
     const url = `${this.urlBase}films`;
     return this.http.get<any>(url).pipe(take(1));
   }
 
-  // Fils By Id
-  getFilmsById(id): Observable<any> {
+  getFilmById(id): Observable<any> {
     const url = `${this.urlBase}films/${id}`;
     return this.http.get<any>(url).pipe(take(1));
   }
@@ -28,8 +26,23 @@ export class SwapiService {
     return this.http.get<any>(url).pipe(take(1));
   }
 
+  getPersonById(personId): Observable<any> {
+    const url = `${this.urlBase}people/${personId}`;
+    return this.http.get<any>(url).pipe(take(1));
+  }
+
+  getPersonByAllURL(person): Observable<any> {
+    const url = person;
+    return this.http.get<any>(url).pipe(take(1));
+  }
+
   getPlanets(): Observable<any> {
     const url = `${this.urlBase}planets`;
+    return this.http.get<any>(url).pipe(take(1));
+  }
+
+  getPlanetById(planetId): Observable<any> {
+    const url = `${this.urlBase}planets/${planetId}`;
     return this.http.get<any>(url).pipe(take(1));
   }
 
@@ -38,13 +51,28 @@ export class SwapiService {
     return this.http.get<any>(url).pipe(take(1));
   }
 
+  getSpecieById(specieId): Observable<any> {
+    const url = `${this.urlBase}species/${specieId}`;
+    return this.http.get<any>(url).pipe(take(1));
+  }
+
   getVehicles(): Observable<any> {
     const url = `${this.urlBase}vehicles`;
     return this.http.get<any>(url).pipe(take(1));
   }
 
+  getVehicleById(vehicleById): Observable<any> {
+    const url = `${this.urlBase}vehicles/${vehicleById}`;
+    return this.http.get<any>(url).pipe(take(1));
+  }
+
   getStarships(): Observable<any> {
     const url = `${this.urlBase}starships`;
+    return this.http.get<any>(url).pipe(take(1));
+  }
+
+  getStarshipById(starshipById): Observable<any> {
+    const url = `${this.urlBase}starships/${starshipById}`;
     return this.http.get<any>(url).pipe(take(1));
   }
 }
