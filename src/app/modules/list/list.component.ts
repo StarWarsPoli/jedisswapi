@@ -39,6 +39,7 @@ export class ListComponent implements OnInit {
     this.initStarships();
   }
 
+  // All FIlms
   initFilms() {
     this.swapiService.getAllFilms().subscribe(resolve => {
       this.films = resolve.results;

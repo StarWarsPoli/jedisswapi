@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core'
-import { Routes, RouterModule } from '@angular/router'
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'home', loadChildren: './modules/home/home.module#HomeModule' },
@@ -9,7 +9,7 @@ const routes: Routes = [
     loadChildren: './modules/detail/detail.module#DetailModule'
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

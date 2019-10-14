@@ -11,8 +11,15 @@ export class SwapiService {
 
   constructor(private http: HttpClient) {}
 
+  // All films
   getAllFilms(): Observable<any> {
     const url = `${this.urlBase}films`;
+    return this.http.get<any>(url).pipe(take(1));
+  }
+
+  // Fils By Id
+  getFilmsById(id): Observable<any> {
+    const url = `${this.urlBase}films/${id}`;
     return this.http.get<any>(url).pipe(take(1));
   }
 
