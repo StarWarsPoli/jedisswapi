@@ -4,6 +4,7 @@ import { SwapiService } from 'src/app/shared/services/swapi/swapi.service';
 import { ActivatedRoute } from '@angular/router';
 import { PlanetModel } from 'src/app/shared/models/planet.model';
 import { FilmModel } from 'src/app/shared/models/film.model';
+import { SpeciesModel } from 'src/app/shared/models/species.model';
 
 @Component({
   selector: 'app-list',
@@ -14,6 +15,7 @@ export class ListComponent implements OnInit {
   films: FilmModel[];
   people: PersonModel[];
   planets: PlanetModel[];
+  species: SpeciesModel[];
   param: string;
 
   constructor(
@@ -28,6 +30,7 @@ export class ListComponent implements OnInit {
     this.initPeople();
     this.initPlanets();
     this.initFilms();
+    this.initSpecies();
   }
 
   initFilms() {
@@ -51,4 +54,10 @@ export class ListComponent implements OnInit {
     });
   }
 
+  initSpecies() {
+    this.swapiService.getSpecies().subscribe(resolve => {
+      this.species = resolve.results;
+      console.log(resolve);
+    });
+  }
 }
