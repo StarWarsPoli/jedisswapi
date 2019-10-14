@@ -63,13 +63,13 @@
     </div>
 
     <div class="row" *ngSwitchCase="'vehiculos'" style="margin: 10px;">
-      <div class="col-lg-2 col-sm-4 portfolio-item" style="margin: 5px;">
+      <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let vehicle of vehicles" style="margin: 5px;">
         <div class="card h-100">
           <a [routerLink]="['/detail/1']"
-            ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
+            ><img class="card-img-top"  src="http://placehold.it/140x140" alt=""
           /></a>
           <div class="resultados-titulo">
-            <a [routerLink]="['/detail/1']">Nombre Vehículo...</a>
+            <a [routerLink]="['/detail/1']">{{ vehicle.name }}</a>
           </div>
         </div>
       </div>
