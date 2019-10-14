@@ -10,4 +10,5 @@
 .resultados-titulo {
   background:#222222;
   text-align: center;
+  max-width: 140px;
 }
