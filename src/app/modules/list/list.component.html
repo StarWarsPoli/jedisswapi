@@ -1,92 +1,94 @@
-<div class="container" id="resultados">
-    <ng-container [ngSwitch]="param">
-      <h2 *ngSwitchCase="'movies'"><span>Películas</span></h2>
-      <h2 *ngSwitchCase="'personajes'"><span>Personajes</span></h2>
-      <h2 *ngSwitchCase="'planetas'"><span>Planetas</span></h2>
-      <h2 *ngSwitchCase="'especies'"><span>Especies</span></h2>
-      <h2 *ngSwitchCase="'vehiculos'"><span>Vehiculos</span></h2>
-      <h2 *ngSwitchCase="'naves'"><span>Naves</span></h2>
+<div class="container" id="resultados">
+  <ng-container [ngSwitch]="param">
+    <h2 *ngSwitchCase="'movies'"><span>Películas</span></h2>
+    <h2 *ngSwitchCase="'personajes'"><span>Personajes</span></h2>
+    <h2 *ngSwitchCase="'planetas'"><span>Planetas</span></h2>
+    <h2 *ngSwitchCase="'especies'"><span>Especies</span></h2>
+    <h2 *ngSwitchCase="'vehiculos'"><span>Vehiculos</span></h2>
+    <h2 *ngSwitchCase="'naves'"><span>Naves</span></h2>
 
-  
-      <div class="row" *ngSwitchCase="'movies'">
-        <div class="col-lg-2 col-sm-4 portfolio-item">
-          <div class="card h-100">
-            <a [routerLink]="['/detail/1']"
-              ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
-            /></a>
-            <div class="resultados-titulo">
-              <a [routerLink]="['/detail/1']">Nombre Pelicula...</a>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="row" *ngSwitchCase="'personajes'">
-        <div
-          class="col-lg-2 col-sm-4 portfolio-item"
-          *ngFor="let person of people"
-        >
-          <div class="card h-100">
-            <a [routerLink]="['/detail/1']"
-              ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
-            /></a>
-            <div class="resultados-titulo">
-              <a [routerLink]="['/detail/1']">{{ person.name }}</a>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="row" *ngSwitchCase="'planetas'">
-        <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let planet of planets">
-          <div class="card h-100">
-            <a [routerLink]="['/detail/1']"
-              ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
-            /></a>
-            <div class="resultados-titulo">
-              <a [routerLink]="['/detail/1']">{{planet.name}}</a>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="row" *ngSwitchCase="'especies'">
-        <div class="col-lg-2 col-sm-4 portfolio-item">
-          <div class="card h-100">
-            <a [routerLink]="['/detail/1']"
-              ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
-            /></a>
-            <div class="resultados-titulo">
-              <a [routerLink]="['/detail/1']">Nombre Especie...</a>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="row" *ngSwitchCase="'vehiculos'">
-        <div class="col-lg-2 col-sm-4 portfolio-item">
-          <div class="card h-100">
-            <a [routerLink]="['/detail/1']"
-              ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
-            /></a>
-            <div class="resultados-titulo">
-              <a [routerLink]="['/detail/1']">Nombre Vehículo...</a>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="row" *ngSwitchCase="'naves'">
-        <div class="col-lg-2 col-sm-4 portfolio-item">
-          <div class="card h-100">
-            <a [routerLink]="['/detail/1']"
-              ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
-            /></a>
-            <div class="resultados-titulo">
-              <a [routerLink]="['/detail/1']">Nombre Nave...</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </ng-container>
-  </div>
+    <div class="row" *ngSwitchCase="'movies'">
+      <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let film of films">
+        <div class="card h-100">
+          <a [routerLink]="['/detail/1']">
+            <img class="card-img-top" src="http://placehold.it/140x140" alt=""
+          /></a>
+          <div class="resultados-titulo">
+            <a [routerLink]="['/detail/1']">{{ film.title }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngSwitchCase="'personajes'">
+      <div
+        class="col-lg-2 col-sm-4 portfolio-item"
+        *ngFor="let person of people"
+      >
+        <div class="card h-100">
+          <a [routerLink]="['/detail/1']"
+            ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
+          /></a>
+          <div class="resultados-titulo">
+            <a [routerLink]="['/detail/1']">{{ person.name }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngSwitchCase="'planetas'">
+      <div
+        class="col-lg-2 col-sm-4 portfolio-item"
+        *ngFor="let planet of planets"
+      >
+        <div class="card h-100">
+          <a [routerLink]="['/detail/1']"
+            ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
+          /></a>
+          <div class="resultados-titulo">
+            <a [routerLink]="['/detail/1']">{{ planet.name }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngSwitchCase="'especies'">
+      <div class="col-lg-2 col-sm-4 portfolio-item">
+        <div class="card h-100">
+          <a [routerLink]="['/detail/1']"
+            ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
+          /></a>
+          <div class="resultados-titulo">
+            <a [routerLink]="['/detail/1']">Nombre Especie...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngSwitchCase="'vehiculos'">
+      <div class="col-lg-2 col-sm-4 portfolio-item">
+        <div class="card h-100">
+          <a [routerLink]="['/detail/1']"
+            ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
+          /></a>
+          <div class="resultados-titulo">
+            <a [routerLink]="['/detail/1']">Nombre Vehículo...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngSwitchCase="'naves'">
+      <div class="col-lg-2 col-sm-4 portfolio-item">
+        <div class="card h-100">
+          <a [routerLink]="['/detail/1']"
+            ><img class="card-img-top" src="http://placehold.it/140x140" alt=""
+          /></a>
+          <div class="resultados-titulo">
+            <a [routerLink]="['/detail/1']">Nombre Nave...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
