@@ -1,6 +1,6 @@
 #resultados {
   background: #222222;
-  margin:auto;
+  margin: auto;
   margin-bottom: 30px;
   margin-top: 30px;
   border-bottom: 3px solid #EBD800;
@@ -8,7 +8,7 @@
 }
 
 .resultados-titulo {
-  background:#222222;
+  background: #222222;
   text-align: center;
-  max-width: 140px;
+  max-width: 150px;
 }
