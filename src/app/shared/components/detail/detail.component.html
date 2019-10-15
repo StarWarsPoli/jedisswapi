@@ -2,9 +2,7 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="http://placehold.it/400x700" alt="" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
@@ -19,10 +17,7 @@
         <p>{{ film.release_date }}</p>
         <h3>Personajes</h3>
         <div class="row">
-          <div
-            class="col-lg-2 col-sm-4 portfolio-item"
-            *ngFor="let person of film.characters"
-          >
+          <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let person of film.characters">
             <app-character [personURL]="person"></app-character>
           </div>
         </div>
@@ -35,29 +30,24 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="http://placehold.it/400x700" alt="" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
-          <span>Star Wars: {{ person.name }}</span>
+          <span>{{ person.name }}</span>
         </h2>
-        <p>
-          <!-- {{ film.opening_crawl }} -->
-        </p>
-        <h3>Director //</h3>
-        <!-- <p>{{ film.director }}</p>
-        <h3>Fecha de Lanzamiento //</h3>
-        <p>{{ film.release_date }}</p> -->
-        <h3>Personajes</h3>
+        <p></p>
+        <h3>Año de nacimiento //</h3>
+        <p>{{ person.birth_year }}</p>
+        <h3>Lugar de Naciento //</h3>
+        <p>{{ person.homeworld }}</p>
+        <h3>Especie //</h3>
+        <p>{{ person.species }}</p>
+        <h3>Peliculas //</h3>
         <div class="row">
-          <!-- <div
-            class="col-lg-2 col-sm-4 portfolio-item"
-            *ngFor="let person of film.characters"
-          >
-            <app-character [personURL]="person"></app-character>
-          </div> -->
+          <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let film of person.films">
+            <app-film [filmURL]="film"> </app-film>
+          </div>
         </div>
       </div>
     </div>
@@ -68,9 +58,7 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="http://placehold.it/400x700" alt="" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
@@ -101,9 +89,7 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="http://placehold.it/400x700" alt="" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
@@ -134,9 +120,7 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="http://placehold.it/400x700" alt="" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
@@ -167,9 +151,7 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="http://placehold.it/400x700" alt="" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
