@@ -2,13 +2,12 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="../../../../assets/images/movies.jpg" alt="Peliculas" width="400"
+            height="700" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
-          <span>Star Wars: {{ film.title }}</span>
+          <span>{{ film.title }}</span>
         </h2>
         <p>
           {{ film.opening_crawl }}
@@ -17,12 +16,9 @@
         <p>{{ film.director }}</p>
         <h3>Fecha de Lanzamiento //</h3>
         <p>{{ film.release_date }}</p>
-        <h3>Personajes</h3>
+        <h3>Personajes //</h3>
         <div class="row">
-          <div
-            class="col-lg-2 col-sm-4 portfolio-item"
-            *ngFor="let person of film.characters"
-          >
+          <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let person of film.characters">
             <app-character [personURL]="person"></app-character>
           </div>
         </div>
@@ -35,27 +31,23 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="../../../../assets/images/personajes2.jpg" alt="Personajes" width="400"
+            height="700" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
           <span>{{ person.name }}</span>
         </h2>
-        <p></p>
+        <br>
         <h3>Año de nacimiento //</h3>
         <p>{{ person.birth_year }}</p>
-        <h3>Lugar de Naciento //</h3>
+        <h3>Lugar de nacimiento //</h3>
         <p>{{ planetName }}</p>
         <h3>Especie //</h3>
         <p>{{ specieName }}</p>
         <h3>Peliculas //</h3>
         <div class="row">
-          <div
-            class="col-lg-2 col-sm-4 portfolio-item"
-            *ngFor="let film of person.films"
-          >
+          <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let film of person.films">
             <app-film [filmURL]="film"> </app-film>
           </div>
         </div>
@@ -68,22 +60,19 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="../../../../assets/images/planets2.jpg" alt="Planets" width="400"
+            height="700" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
-        <h2>
-          <span>{{ planet.name }}</span>
-        </h2>
-        <p></p>
+        <h2><span>{{ planet.name }}</span></h2>
 
-        <h3>Peliculas</h3>
+        <br>
+        <h3>Poblaciónn //</h3>
+        <p>{{ planet.population }}</p>
+        <br>
+        <h3>Peliculas //</h3>
         <div class="row">
-          <div
-            class="col-lg-2 col-sm-4 portfolio-item"
-            *ngFor="let film of planet.films"
-          >
+          <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let film of planet.films">
             <app-film [filmURL]="film"></app-film>
           </div>
         </div>
@@ -96,21 +85,24 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="../../../../assets/images/especies2.jpg" alt="Especies" width="400"
+            height="700" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
           <span>{{ specie.name }}</span>
         </h2>
-        <p></p>
-        <h3>Peliculas</h3>
+        <br>
+        <h3>Clasificación //</h3>
+        <p>{{ specie.classification }}</p>
+        <br>
+        <h3>Idioma //</h3>
+        <p>{{ specie.language }}</p>
+        <br>
+
+        <h3>Peliculas//</h3>
         <div class="row">
-          <div
-            class="col-lg-2 col-sm-4 portfolio-item"
-            *ngFor="let film of specie.films"
-          >
+          <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let film of specie.films">
             <app-film [filmURL]="film"></app-film>
           </div>
         </div>
@@ -123,29 +115,25 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="../../../../assets/images/vehiculos2.jpg" alt="Vehiculos" width="400"
+            height="700" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
-          <span>Star Wars: {{ vehicle.name }}</span>
+          <span>{{ vehicle.name }}</span>
         </h2>
-        <p>
-          <!-- {{ film.opening_crawl }} -->
-        </p>
-        <h3>Director //</h3>
-        <!-- <p>{{ film.director }}</p>
-        <h3>Fecha de Lanzamiento //</h3>
-        <p>{{ film.release_date }}</p> -->
-        <h3>Personajes</h3>
+        <br>
+        <h3>Tripulación //</h3>
+        <p>{{ vehicle.crew }}</p>
+        <br>
+        <h3>Pasajeros //</h3>
+        <p>{{ vehicle.passangers }}</p>
+        <br>
+        <h3>Peliculas//</h3>
         <div class="row">
-          <!-- <div
-            class="col-lg-2 col-sm-4 portfolio-item"
-            *ngFor="let person of film.characters"
-          >
-            <app-character [personURL]="person"></app-character>
-          </div> -->
+          <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let film of specie.films">
+            <app-film [filmURL]="film"></app-film>
+          </div>
         </div>
       </div>
     </div>
@@ -156,29 +144,25 @@
   <div class="container" id="detalles">
     <div class="row">
       <div class="col-6 col-md-4 image-detalle">
-        <a href="#"
-          ><img class="img-fluid" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a href="#"><img class="img-fluid" src="../../../../assets/images/naves2.jpg" alt="Naves" width="400"
+            height="700" /></a>
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
-          <span>Star Wars: {{ starship.name }}</span>
+          <span>{{ starship.name }}</span>
         </h2>
-        <p>
-          <!-- {{ film.opening_crawl }} -->
-        </p>
-        <h3>Director //</h3>
-        <!-- <p>{{ film.director }}</p>
-        <h3>Fecha de Lanzamiento //</h3>
-        <p>{{ film.release_date }}</p> -->
-        <h3>Personajes</h3>
+        <br>
+        <h3>Tripulación //</h3>
+        <p>{{ starship.crew }}</p>
+        <br>
+        <h3>Pasajeros //</h3>
+        <p>{{ starship.passangers }}</p>
+        <br>
+        <h3>Peliculas//</h3>
         <div class="row">
-          <!-- <div
-            class="col-lg-2 col-sm-4 portfolio-item"
-            *ngFor="let person of film.characters"
-          >
-            <app-character [personURL]="person"></app-character>
-          </div> -->
+          <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let film of specie.films">
+            <app-film [filmURL]="film"></app-film>
+          </div>
         </div>
       </div>
     </div>

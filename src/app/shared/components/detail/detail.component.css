@@ -5,9 +5,19 @@
   margin-top: 30px;
   border-bottom: 3px solid #ebd800;
 }
+
 .image-detalle {
   padding-left: 0px;
 }
+
 .text-detalle {
   padding-top: 30px;
+}
+
+.card {
+  background: #222222;
+}
+
+.resultados-titulo {
+  background: #222222;
 }
