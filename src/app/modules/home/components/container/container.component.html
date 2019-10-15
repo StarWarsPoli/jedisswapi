@@ -24,17 +24,13 @@
   <h2><span style="background: #000000;">Peliculas</span></h2>
 
   <div class="row" style="padding-top: 20px;">
-    <div
-      class="col-lg-4 col-sm-6 portfolio-item"
-      *ngFor="let film of films; let i = index"
-    >
+    <div class="col-lg-4 col-sm-6 portfolio-item" *ngFor="let film of films; let i = index">
       <div class="card h-100">
-        <a [routerLink]="['/movies/', i + 1]"
-          ><img class="card-img-top" src="http://placehold.it/400x700" alt=""
-        /></a>
+        <a [routerLink]="['/movies/', i + 1]"><img class="card-img-top" src="../../../../../assets/images/movies.jpg"
+            alt="Peliculas" width="400" height="700" /></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a [routerLink]="['/detail/1']">{{ film.title }}</a>
+            <a [routerLink]="['/movies/', i + 1]">{{ film.title }}</a>
           </h4>
           <p class="card-text">{{ film.release_date }}</p>
         </div>
