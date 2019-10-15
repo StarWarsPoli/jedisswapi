@@ -9,7 +9,7 @@ import { take } from 'rxjs/operators';
 export class SwapiService {
   private urlBase = 'https://swapi.co/api/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAllFilms(): Observable<any> {
     const url = `${this.urlBase}films`;
@@ -63,6 +63,11 @@ export class SwapiService {
 
   getSpecieById(specieId): Observable<any> {
     const url = `${this.urlBase}species/${specieId}`;
+    return this.http.get<any>(url).pipe(take(1));
+  }
+
+  getSpecieByAllURL(specie): Observable<any> {
+    const url = specie;
     return this.http.get<any>(url).pipe(take(1));
   }
 

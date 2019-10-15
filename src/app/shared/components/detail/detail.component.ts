@@ -21,6 +21,7 @@ export class DetailComponent implements OnInit {
   @Input() vehicle: VehicleModel;
   @Input() starship: StarshipModel;
   planetName: string;
+  specieName: string;
 
   constructor(
     private swapiService: SwapiService,
@@ -28,17 +29,19 @@ export class DetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    
-      this.initPlanetByAllURL(this.person.homeworld);
-      console.log(this.person)
-    
+    this.initPlanetByAllURL(this.person.homeworld);
+    this.initSpecieByAllURL(this.person.species[0]);
   }
 
   initPlanetByAllURL(planetURL) {
     this.swapiService.getPlanetByAllURL(planetURL).subscribe(resolve => {
       this.planetName = resolve.name;
-      console.log(this.planetName)
     });
   }
 
+  initSpecieByAllURL(specieURL) {
+    this.swapiService.getPlanetByAllURL(specieURL).subscribe(resolve => {
+      this.specieName = resolve.name;
+    });
+  }
 }
