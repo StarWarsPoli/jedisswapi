@@ -51,6 +51,11 @@ export class SwapiService {
     return this.http.get<any>(url).pipe(take(1));
   }
 
+  getPlanetByAllURL(planet): Observable<any> {
+    const url = planet;
+    return this.http.get<any>(url).pipe(take(1));
+  }
+
   getSpecies(): Observable<any> {
     const url = `${this.urlBase}species`;
     return this.http.get<any>(url).pipe(take(1));

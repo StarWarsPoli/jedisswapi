@@ -5,6 +5,8 @@ import { PlanetModel } from '../../models/planet.model';
 import { SpeciesModel } from '../../models/species.model';
 import { VehicleModel } from '../../models/vehicle.model';
 import { StarshipModel } from '../../models/starship.model';
+import { ActivatedRoute } from '@angular/router';
+import { SwapiService } from '../../services/swapi/swapi.service';
 
 @Component({
   selector: 'app-detail',
@@ -18,8 +20,25 @@ export class DetailComponent implements OnInit {
   @Input() specie: SpeciesModel;
   @Input() vehicle: VehicleModel;
   @Input() starship: StarshipModel;
+  planetName: string;
 
-  constructor() {}
+  constructor(
+    private swapiService: SwapiService,
+    private route: ActivatedRoute
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+      this.initPlanetByAllURL(this.person.homeworld);
+      console.log(this.person)
+    
+  }
+
+  initPlanetByAllURL(planetURL) {
+    this.swapiService.getPlanetByAllURL(planetURL).subscribe(resolve => {
+      this.planetName = resolve.name;
+      console.log(this.planetName)
+    });
+  }
+
 }
