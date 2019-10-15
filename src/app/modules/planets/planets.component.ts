@@ -25,7 +25,7 @@ export class PlanetsComponent implements OnInit {
   }
 
   initPlanetById(paramId) {
-    this.swapiService.getPersonById(paramId).subscribe(resolve => {
+    this.swapiService.getPlanetById(paramId).subscribe(resolve => {
       this.planet = resolve;
       console.log(this.planet);
     });
