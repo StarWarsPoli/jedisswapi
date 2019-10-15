@@ -29,8 +29,12 @@ export class DetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.initPlanetByAllURL(this.person.homeworld);
-    this.initSpecieByAllURL(this.person.species[0]);
+    console.log(this.specie);
+
+    if (this.person) {
+      this.initPlanetByAllURL(this.person.homeworld);
+      this.initSpecieByAllURL(this.person.species[0]);
+    }
   }
 
   initPlanetByAllURL(planetURL) {
@@ -42,6 +46,18 @@ export class DetailComponent implements OnInit {
   initSpecieByAllURL(specieURL) {
     this.swapiService.getPlanetByAllURL(specieURL).subscribe(resolve => {
       this.specieName = resolve.name;
+    });
+  }
+
+  initVehicleByAllURL(specieURL) {
+    this.swapiService.getVehicletByAllURL(specieURL).subscribe(resolve => {
+      this.vehicle = resolve.name;
+    });
+  }
+
+  initStarShipByAllURL(specieURL) {
+    this.swapiService.getVehicletByAllURL(specieURL).subscribe(resolve => {
+      this.vehicle = resolve.name;
     });
   }
 }
