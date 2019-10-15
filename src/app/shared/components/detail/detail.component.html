@@ -74,23 +74,20 @@
       </div>
       <div class="col-12 col-md-8 text-detalle">
         <h2>
-          <span>Star Wars: {{ planet.name }}</span>
+          <span>{{ planet.name }}</span>
         </h2>
         <p>
-          <!-- {{ film.opening_crawl }} -->
+         
         </p>
-        <h3>Director //</h3>
-        <!-- <p>{{ film.director }}</p>
-        <h3>Fecha de Lanzamiento //</h3>
-        <p>{{ film.release_date }}</p> -->
-        <h3>Personajes</h3>
+        
+        <h3>Peliculas</h3>
         <div class="row">
-          <!-- <div
+         <div
             class="col-lg-2 col-sm-4 portfolio-item"
-            *ngFor="let person of film.characters"
+            *ngFor="let film of planet.films"
           >
-            <app-character [personURL]="person"></app-character>
-          </div> -->
+            <app-films [filmURL]="film"></app-films>
+          </div>
         </div>
       </div>
     </div>
