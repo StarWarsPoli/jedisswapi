@@ -1,84 +1,82 @@
 <div class="container" id="resultados">
-  <ng-container [ngSwitch]="param">
-    <h2 *ngSwitchCase="'movies'"><span>Películas</span></h2>
-    <h2 *ngSwitchCase="'personajes'"><span>Personajes</span></h2>
-    <h2 *ngSwitchCase="'planetas'"><span>Planetas</span></h2>
-    <h2 *ngSwitchCase="'especies'"><span>Especies</span></h2>
-    <h2 *ngSwitchCase="'vehiculos'"><span>Vehiculos</span></h2>
-    <h2 *ngSwitchCase="'naves'"><span>Naves</span></h2>
+    <ng-container [ngSwitch]="param">
+        <h2 *ngSwitchCase="'movies'"><span>Películas</span></h2>
+        <h2 *ngSwitchCase="'personajes'"><span>Personajes</span></h2>
+        <h2 *ngSwitchCase="'planetas'"><span>Planetas</span></h2>
+        <h2 *ngSwitchCase="'especies'"><span>Especies</span></h2>
+        <h2 *ngSwitchCase="'vehiculos'"><span>Vehiculos</span></h2>
+        <h2 *ngSwitchCase="'naves'"><span>Naves</span></h2>
 
-    <div class="row" *ngSwitchCase="'movies'">
-      <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let film of films">
-        <div class="card h-100">
-          <a [routerLink]="['/detail/1']">
-            <img class="card-img-top" src="http://placehold.it/140x140" alt="" /></a>
-          <div class="resultados-titulo">
-            <a [routerLink]="['/detail/1']">{{ film.title }}</a>
-          </div>
+        <div class="row" *ngSwitchCase="'movies'">
+            <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let film of films">
+                <div class="card h-100">
+                    <a [routerLink]="['/detail/1']">
+                        <img class="card-img-top" src="http://placehold.it/140x140" alt="" /></a>
+                    <div class="resultados-titulo">
+                        <a [routerLink]="['/detail/1']">{{ film.title }}</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="row" *ngSwitchCase="'personajes'" style="margin: 10px;">
-      <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let person of people; let i = index" style="margin: 5px;">
-        <div class="card h-100">
-          <a [routerLink]="['/people/', i + 1]"><img class="card-img-top" src="../../../assets/images/personajes.jpg"
-              alt="Personajes" width="150" height="150" /></a>
-          <div class="resultados-titulo">
-            <a [routerLink]="['/people/', i + 1]">{{ person.name }}</a>
-          </div>
+        <div class="row" *ngSwitchCase="'personajes'" style="margin: 10px;">
+            <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let person of people; let i = index" style="margin: 5px;">
+                <div class="card h-100">
+                    <a [routerLink]="['/people/', i + 1]"><img class="card-img-top" src="../../../assets/images/personajes.jpg" alt="Personajes" width="150" height="150" /></a>
+                    <div class="resultados-titulo">
+                        <a [routerLink]="['/people/', i + 1]">{{ person.name }}</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="row" *ngSwitchCase="'planetas'" style="margin: 10px;">
-      <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let planet of planets; let i = index" style="margin: 5px;">
-        <div class="card h-100">
-          <a [routerLink]="['/planets/', i + 1]"><img class="card-img-top" src="../../../assets/images/planets.jpg"
-              alt="Planetas" width="150" height="150" /></a>
-          <div class="resultados-titulo">
-            <a [routerLink]="['/planets/1', i + 1]">{{ planet.name }}</a>
-          </div>
+        <div class="row" *ngSwitchCase="'planetas'" style="margin: 10px;">
+            <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let planet of planets; let i = index" style="margin: 5px;">
+                <div class="card h-100">
+                    <a [routerLink]="['/planets/', i + 1]"><img class="card-img-top" src="../../../assets/images/planets.jpg" alt="Planetas" width="150" height="150" /></a>
+                    <div class="resultados-titulo">
+                        <a [routerLink]="['/planets/1', i + 1]">{{ planet.name }}</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="row" *ngSwitchCase="'especies'" style="margin: 10px;">
-      <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let specie of species; let i = index" style="margin: 5px;">
-        <div class="card h-100">
-          <a [routerLink]="['/species/', i + 1]"><img class="card-img-top" src="../../../assets/images/especies.jpg"
-              alt="Especies" width="150" height="150" /></a>
-          <div class="resultados-titulo">
-            <a [routerLink]="['/species/', i + 1]">{{ specie.name }}</a>
-          </div>
-        </div>
-      </div>
-    </div>
+        <div class="row" *ngSwitchCase="'especies'" style="margin: 10px;">
+            <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let specie of species; let i = index" style="margin: 5px;">
+                <div class="card h-100">
+                    <a [routerLink]="['/species/', i + 1]"><img class="card-img-top" src="../../../assets/images/especies.jpg" alt="Especies" width="150" height="150" /></a>
+                    <div class="resultados-titulo">
+                        <a [routerLink]="['/species/', i + 1]">{{ specie.name }}</a>
+                    </div>
+                </div>
 
-    <div class="row" *ngSwitchCase="'vehiculos'" style="margin: 10px;">
-      <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let vehicle of vehicles; let i = index"
-        style="margin: 5px;">
-        <div class="card h-100">
-          <a [routerLink]="['/vehicles/', i + 1]"><img class="card-img-top" src="../../../assets/images/vehiculos.jpg"
-              alt="Vehiculos" width="150" height="150" /></a>
-          <div class="resultados-titulo">
-            <a [routerLink]="['/vehicles/', i + 1]">{{ vehicle.name }}</a>
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="row" *ngSwitchCase="'naves'" style="margin: 10px;">
-      <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let starship of starships; let i = index"
-        style="margin: 5px;">
-        <div class="card h-100">
-          <a [routerLink]="['/starships/', i + 1]"><img class="card-img-top" src="../../../assets/images/naves.jpg"
-              alt="Naves" width="150" height="150" /></a>
-          <div class="resultados-titulo">
-            <a [routerLink]="['/starships/', i + 1]">{{ starship.name }}</a>
-          </div>
+
+        <div class="row" *ngSwitchCase="'vehiculos'" style="margin: 10px;">
+            <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let vehicle of vehicles; let i = index" style="margin: 5px;">
+                <div class="card h-100">
+                    <a [routerLink]="['/vehicles/', i + 1]"><img class="card-img-top" src="../../../assets/images/vehiculos.jpg" alt="Vehiculos" width="150" height="150" /></a>
+                    <div class="resultados-titulo">
+                        <a [routerLink]="['/vehicles/', i + 1]">{{ vehicle.name }}</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </ng-container>
+
+        <div class="row" *ngSwitchCase="'naves'" style="margin: 10px;">
+            <div class="col-lg-2 col-sm-4 portfolio-item" *ngFor="let starship of starships; let i = index" style="margin: 5px;">
+                <div class="card h-100">
+                    <a [routerLink]="['/starships/', i + 1]"><img class="card-img-top" src="../../../assets/images/naves.jpg" alt="Naves" width="150" height="150" /></a>
+                    <div class="resultados-titulo">
+                        <a [routerLink]="['/starships/', i + 1]">{{ starship.name }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align: right;"><a href="#">SIGUIENTE</a></div>
+        </div>
+    </ng-container>
 </div>
